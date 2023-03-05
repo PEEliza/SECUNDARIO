@@ -17,15 +17,43 @@ public class TestCovid {
  }
  
  public void calcularPersonaRiesgo(){
+    
      
-     if ((edad >= 65) OR (Ecronica = true) OR (imc > 30)){
-     
+     if ((edad >= 65) ||  (Ecronica = true) ||  (IMC > 30)){
+         System.out.println("PERSONA DE RIESGO");
+ }   else ((edad<=65) || (Ecronica = false) ||  (IMC < 30)){
+     System.out.println("PERSONA SIN RIESGO");
  }
   
  
  }
  private void calcularIMC(){
      double IMC;
-     IMC = peso / estatura;
+     IMC = peso / (estatura*estatura);
+ }
+ 
+ public int getEdad(){
+     return edad;
+ }
+ public boolean getEcronica(){
+     return Ecronica;
+ }
+ public double getPeso(){
+     return peso; 
+ }
+ public double getEstatura(){
+     return estatura;
+ }
+ public void setEdad(int valor){
+     edad = valor;
+ }
+ public void setEcronica(boolean valor){
+     Ecronica = valor;
+ }
+ public void setPeso(double valor){
+     peso = valor;
+ }
+ public void setEstatura(double valor){
+     estatura = valor;
  }
 }
